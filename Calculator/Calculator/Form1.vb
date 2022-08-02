@@ -1,160 +1,159 @@
-﻿Public Class Form1
+﻿Public Class Calculator
 
     Dim Firstnum As Decimal
     Dim secondnum As Decimal
     Dim operation As Integer
     Dim Operatior_Selector As Boolean = False
+    Dim Operator_Selector As Boolean
 
     Private Property Fisrtnum As String
 
-    Private Property Operator_Selector As Boolean
-
-    Private Property OperatingSystem As Integer
+    Private Property Operations As Integer
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If TextBox1.Text <> "0" Then
-            TextBox1.Text += "1"
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn1.Click
+        If txtDisplay.Text <> "0" Then
+            txtDisplay.Text += "1"
         Else
-            TextBox1.Text = "1"
+            txtDisplay.Text = "1"
         End If
 
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        If TextBox1.Text <> "0" Then
-            TextBox1.Text += "2"
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btn2.Click
+        If txtDisplay.Text <> "0" Then
+            txtDisplay.Text += "2"
         Else
-            TextBox1.Text = "2"
+            txtDisplay.Text = "2"
         End If
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        If TextBox1.Text <> "0" Then
-            TextBox1.Text += "3"
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btn3.Click
+        If txtDisplay.Text <> "0" Then
+            txtDisplay.Text += "3"
         Else
-            TextBox1.Text = "3"
+            txtDisplay.Text = "3"
         End If
     End Sub
 
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        If TextBox1.Text <> "0" Then
-            TextBox1.Text += "4"
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btn4.Click
+        If txtDisplay.Text <> "0" Then
+            txtDisplay.Text += "4"
         Else
-            TextBox1.Text = "4"
+            txtDisplay.Text = "4"
         End If
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        If TextBox1.Text <> "0" Then
-            TextBox1.Text += "5"
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btn5.Click
+        If txtDisplay.Text <> "0" Then
+            txtDisplay.Text += "5"
         Else
-            TextBox1.Text = "5"
+            txtDisplay.Text = "5"
         End If
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        If TextBox1.Text <> "0" Then
-            TextBox1.Text += "6"
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btn6.Click
+        If txtDisplay.Text <> "0" Then
+            txtDisplay.Text += "6"
         Else
-            TextBox1.Text = "6"
+            txtDisplay.Text = "6"
         End If
     End Sub
 
-   
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        If TextBox1.Text <> "0" Then
-            TextBox1.Text += "7"
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles btn7.Click
+        If txtDisplay.Text <> "0" Then
+            txtDisplay.Text += "7"
         Else
-            TextBox1.Text = "7"
+            txtDisplay.Text = "7"
         End If
     End Sub
 
-    
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-        If TextBox1.Text <> "0" Then
-            TextBox1.Text += "8"
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles btn8.Click
+        If txtDisplay.Text <> "0" Then
+            txtDisplay.Text += "8"
         Else
-            TextBox1.Text = "8"
+            txtDisplay.Text = "8"
         End If
     End Sub
 
-   
-    
-    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-        If TextBox1.Text <> "0" Then
-            TextBox1.Text += "9"
+
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles btn9.Click
+        If txtDisplay.Text <> "0" Then
+            txtDisplay.Text += "9"
         Else
-            TextBox1.Text = "9"
+            txtDisplay.Text = "9"
         End If
     End Sub
 
-    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        If TextBox1.Text <> "0" Then
-            TextBox1.Text += "0"
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles btn0.Click
+        If txtDisplay.Text <> "0" Then
+            txtDisplay.Text += "0"
         End If
     End Sub
 
-    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
-        If Not (TextBox1.Text.Contains(".")) Then
-            TextBox1.Text += "."
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles btncoma.Click
+        If Not (txtDisplay.Text.Contains(".")) Then
+            txtDisplay.Text += "."
         End If
     End Sub
 
-    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
-        TextBox1.Text = "0"
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles btncancel.Click
+        txtDisplay.Text = "0"
     End Sub
 
-    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
-        Fisrtnum = TextBox1.Text
-        TextBox1.Text = "0"
+    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles btnaddition.Click
+        Fisrtnum = txtDisplay.Text
+        txtDisplay.Text = "0"
         Operator_Selector = True
         Operations = 1 ' = +
 
     End Sub
 
-    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
-        Fisrtnum = TextBox1.Text
-        TextBox1.Text = "0"
+    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles btnsubstract.Click
+        Fisrtnum = txtDisplay.Text
+        txtDisplay.Text = "0"
         Operator_Selector = True
         Operations = 2 ' = -
 
     End Sub
 
-    Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
-        Fisrtnum = TextBox1.Text
-        TextBox1.Text = "0"
+    Private Sub Button15_Click(sender As Object, e As EventArgs) Handles btnmultiply.Click
+        Fisrtnum = txtDisplay.Text
+        txtDisplay.Text = "0"
         Operator_Selector = True
         Operations = 3 ' = *
     End Sub
 
-    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
-        Fisrtnum = TextBox1.Text
-        TextBox1.Text = "0"
+    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles btndivision.Click
+        Fisrtnum = txtDisplay.Text
+        txtDisplay.Text = "0"
         Operator_Selector = True
         Operations = 4 ' = /
     End Sub
 
-    Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
+    Private Sub Button17_Click(sender As Object, e As EventArgs) Handles btnequal.Click
         If Operator_Selector = True Then
-            secondnum = TextBox1.Text
+            secondnum = txtDisplay.Text
             If Operations = 1 Then
-                TextBox1.Text = Firstnum + secondnum
+                txtDisplay.Text = Firstnum + secondnum
             ElseIf Operations = 2 Then
-                TextBox1.Text = Firstnum - secondnum
+                txtDisplay.Text = Firstnum - secondnum
             ElseIf Operations = 3 Then
-                TextBox1.Text = Firstnum * secondnum
+                txtDisplay.Text = Firstnum * secondnum
             Else
                 If secondnum = 0 Then
-                    TextBox1.Text = "Error!"
+                    txtDisplay.Text = "Error!"
                 Else
-                    TextBox1.Text = Firstnum / secondnum
+                    txtDisplay.Text = Firstnum / secondnum
                 End If
             End If
             Operator_Selector = False
