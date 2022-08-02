@@ -14,7 +14,7 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
-
+            // This is a btn section
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn1.Click
         If txtDisplay.Text <> "0" Then
             txtDisplay.Text += "1"
@@ -139,7 +139,7 @@
         Operator_Selector = True
         Operations = 4 ' = /
     End Sub
-
+            /* The code below will print Error if you calculate incorrectly */
     Private Sub Button17_Click(sender As Object, e As EventArgs) Handles btnequal.Click
         If Operator_Selector = True Then
             secondnum = txtDisplay.Text
